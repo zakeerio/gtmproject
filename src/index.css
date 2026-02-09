@@ -1,0 +1,123 @@
+/* ---------------- IMPORTS ---------------- */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ---------------- FONT-FACE ---------------- */
+@font-face {
+  font-family: "timepos";
+  src: url("/fonts/Tiempos-Font/TiemposHeadline-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "financier";
+  src: url("/fonts/test-financier-collection-font/TestFinancierDisplay-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+/* ---------------- ROOT VARIABLES ---------------- */
+:root {
+  /* Colors */
+  --gray-light: #8D8D8D;
+  --gray-medium: #3F3F3F;
+  --gray-dark: #292929;
+  --teal-primary: #075F58;
+  --border: #CBCBCB;
+
+  /* Backgrounds */
+  --bg-primary: #075F58;
+  --bg-secondary: #292929;
+  --bg-dark: #000000;
+  --bg-gray: #3F3F3F;
+  --bg-light: #8D8D8D;
+
+  /* Fonts */
+  --font-primary: "timepos", serif;
+  --font-secondary: "financier", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Font Sizes */
+  --text-h1: clamp(30px, 5vw, 48px);
+  --text-h2: clamp(32px, 5vw, 48px);
+  --text-h3: clamp(26px, 4vw, 32px);
+  --text-h4: clamp(22px, 3vw, 28px);
+  --text-h5: clamp(18px, 2.5vw, 23px);
+  --text-body-lg: clamp(18px, 1.8vw, 24px); /* FIXED */
+  --text-body: clamp(15px, 1.6vw, 16px);
+  --text-small: clamp(13px, 1.4vw, 14px);
+}
+
+/* ---------------- BASE LAYER ---------------- */
+@layer base {
+  body {
+    font-family: var(--font-mono);
+    font-size: var(--text-body);
+    line-height: 1.4;
+    color: var(--gray-light);
+  }
+
+  h1 { font-size: var(--text-h1); font-family: var(--font-primary); line-height: 1.2; font-weight: 300; }
+  h2 { font-size: var(--text-h2); font-family: var(--font-primary); line-height: 1.2; }
+  h3 { font-size: var(--text-h3); font-family: var(--font-secondary); }
+  h4 { font-size: var(--text-h4); font-family: var(--font-secondary); }
+  h5 { font-size: var(--text-h5); font-family: var(--font-secondary); font-weight: 400; color: var(--teal-primary); }
+
+  li { font-family: var(--font-mono); }
+
+  .container { @apply mx-auto max-w-[1280px]; }
+
+  main {
+    @apply px-5 pt-14.25 lg:pt-0;
+  }
+}
+
+/* ---------------- UTILITIES LAYER ---------------- */
+@layer utilities {
+  /* Fonts */
+  .font-primary { font-family: var(--font-primary); }
+  .font-secondary { font-family: var(--font-secondary); }
+  .font-mono { font-family: var(--font-mono); }
+
+  /* Text Sizes */
+  .text-h1 { font-size: var(--text-h1); font-weight: 300; }
+  .text-h2 { font-size: var(--text-h2); }
+  .text-h3 { font-size: var(--text-h3); }
+  .text-h4 { font-size: var(--text-h4); }
+  .text-h5 { font-size: var(--text-h5); }
+  .text-body-lg { font-size: var(--text-body-lg); }
+  .text-body { font-size: var(--text-body); }
+
+  /* Colors */
+  .text-primary { color: var(--teal-primary); }
+  .text-secondary { color: var(--gray-dark); }
+  .text-gray { color: var(--gray-medium); }
+  .text-muted { color: var(--gray-light); }
+
+  .bg-primary { background-color: var(--bg-primary); }
+  .bg-secondary { background-color: var(--bg-secondary); }
+  .bg-dark { background-color: var(--bg-dark); }
+  .bg-gray { background-color: var(--bg-gray); }
+  .bg-light { background-color: var(--bg-light); }
+
+  .border-primary { border-color: var(--border); }
+
+  /* Form Border */
+  .form_border {
+    position: relative;
+  }
+
+  .form_border::before,
+  .form_border::after {
+    content: '';
+    /* @apply absolute border-t border-primary -left-[50vw] w-[150vw]; */
+    @apply absolute ring-[0.6px] ring-[#989898]/50;
+    left: -50vw;
+    width: 150vw;
+  }
+
+  .form_border::before { top: 0; }
+  .form_border::after { @apply lg:top-full top-13.25;  }
+  .container {
+    @apply mx-auto max-w-[1280px];
+  }
+}
