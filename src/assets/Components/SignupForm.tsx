@@ -22,7 +22,7 @@ export default function SignupForm({ buttonText = "Let us know", classInput, cla
 
   return (
     <form
-      action={action}
+      action={action && !action.startsWith("mailto:") ? action : undefined}
       onSubmit={handleSubmit}
       method={action && !action.startsWith("mailto:") ? "post" : undefined}
       encType={action && !action.startsWith("mailto:") ? "text/plain" : undefined}
@@ -33,7 +33,7 @@ export default function SignupForm({ buttonText = "Let us know", classInput, cla
           onChange={(e) => setEmail(e.target.value)} />
       </div>
       <div className={clsx("lg:px-0 px-3", classButton)}>
-        <button className="bg-[#0D5352] cursor-pointer text-white uppercase font-moo w-full lg:w-auto min-w-35 lg:h-auto h-13 px-4 py-2 flex items-center justify-center lg:block whitespace-nowrap hover:bg-black transition-colors duration-300">
+        <button className="bg-[#0D5352] cursor-pointer text-white uppercase font-mono w-full lg:w-auto min-w-35 lg:h-auto h-13 px-4 py-2 flex items-center justify-center lg:block whitespace-nowrap hover:bg-black transition-colors duration-300">
           {buttonText}
         </button>
       </div>
