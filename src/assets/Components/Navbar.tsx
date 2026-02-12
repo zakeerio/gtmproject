@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Button from "./Button";
 import { useState } from "react";
 import SignupForm from "./SignupForm";
 export default function Navbar() {
@@ -30,14 +29,11 @@ export default function Navbar() {
               ))}
             </ul>
             <div className="lg:px-6 lg:py-8 border-x border-primary h-full flex items-end">
-              <div className="lg:block hidden">
-                <Button text="See Whitepaper" padding="6px 16px" />
-              </div>
               <div className="block lg:hidden w-full">
                 <div className="pb-5">
-                  <h3 className="text-primary font-primary text-center">Unlock <span className="block lg:inline-block">the full strategy</span></h3>
+                  <h3 className="text-primary font-primary text-center">Interested in learning more</h3>
                 </div>
-                <SignupForm buttonText="Download" classButton="px-3" classInput="px-3 border-y border-primary" /> 
+                <SignupForm buttonText="Contact Us" action="mailto:tkrueger@gatesmillstech.com;zwolfe@gatesmillstech.com" classButton="px-3" classInput="px-3 border-y border-primary" /> 
                 
               </div>
             </div>

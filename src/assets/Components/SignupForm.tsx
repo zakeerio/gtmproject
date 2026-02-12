@@ -4,11 +4,12 @@ type SignupFormProps = {
   buttonText?: string;
   classInput?: string;
   classButton?: string;
+  action?: string;
 };
 
-export default function SignupForm({ buttonText = "Let us know", classInput, classButton }: SignupFormProps) {
+export default function SignupForm({ buttonText = "Let us know", classInput, classButton, action }: SignupFormProps) {
   return (
-    <form className="lg:bg-white lg:flex  block lg:p-2 ">
+    <form action={action} method={action ? "post" : undefined} encType={action ? "text/plain" : undefined} className="lg:bg-white lg:flex  block lg:p-2 ">
       <div className={clsx("w-full mb-1.5 px-3 border-y border-primary lg:px-0 lg:mb-0 lg:border-none ", classInput)}>
         <input type="email" name="email" required placeholder="What’s your email?" className="w-full text-lg bg-white lg:h-full h-13 px-2 font-secondary outline-none placeholder-[#8D8D8D] placeholder-opacity-100 " />
       </div>

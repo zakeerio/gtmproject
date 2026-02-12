@@ -1,4 +1,4 @@
-import Button from "../Button";
+// import Button from "../Button";
 
 export default function Banner() {
     return (
@@ -7,10 +7,10 @@ export default function Banner() {
                 <div className="lg:max-w-150 flex flex-col items-start gap-1">
                     <div className="flex items-center gap-2.5">
                         <img className="w-7.5" src="/site-logo.svg" alt="" />
-                        <p className="text-h5 text-primary font-mono "> GATES MILLS TECH </p>
+                        <p className="text-h5 text-primary font-mono "> GATES MILLS TECHNOLOGIES </p>
                     </div>
-                    <h1 className="text-h1 text-secondary font-primary"> Quantitative, automated <br /> investment in US Equities. </h1>
-                    <Button text="Download whitepaper" padding="14px 32px" />
+                    <h1 className="text-h1 text-secondary font-primary"> Quantitative, automated <br /> trading of US Equities. </h1>
+                    {/* <Button text="Download whitepaper" padding="14px 32px" /> */}
                 </div>
             </div>
 
