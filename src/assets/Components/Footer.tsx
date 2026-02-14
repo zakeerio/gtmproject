@@ -34,8 +34,8 @@ export default function Footer() {
         {footerLinks.map((link, index) => (
           <Link key={index} to={link.to} className={`text-lg uppercase hover:text-[#075F58] transition-colors duration-300 flex items-center justify-center p-2 ${link.borders}`}> {link.text}</Link>
         ))}
-        <div className="lg:border-y border-primary lg:row-start-auto row-start-5 col-span-4 lg:col-span-1"> 
-          <SignupForm buttonText="Contact Us" action="mailto:tkrueger@gatesmillstech.com;zwolfe@gatesmillstech.com" classButton="!px-0" classInput="!px-0"  source="Footer Form" />
+        <div className="relative z-1 lg:border-y border-primary lg:row-start-auto row-start-5 col-span-4 lg:col-span-1"> 
+          <SignupForm buttonText="Contact Us" action="mailto:tkrueger@gatesmillstech.com;zwolfe@gatesmillstech.com" classButton="!px-0" classInput="!px-0"  source="FooterForm" />
         </div>
         <Link to="/" className="lg:flex hidden p-11 border-r border-primary items-center justify-center ">
             <img src="/site-logo.svg" alt="" className="cursor-pointer transition-transform duration-300 ease-out hover:scale-110" />
