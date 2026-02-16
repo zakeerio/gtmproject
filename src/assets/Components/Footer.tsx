@@ -24,7 +24,10 @@ export default function Footer() {
   return (
     <div className="grid gap-0 content-start">
       <div className="grid lg:grid-cols-[12%_12%_12%_12%_12%_40%] grid-cols-[1fr_1fr_1fr_1fr] border-t border-b border-primary font-mono">
-        <div className="bg-[url('/footer_dot.svg')] border-r border-primary col-span-4 lg:col-span-5 border-b border-primary lg:h-auto h-21"></div>
+        <div
+          className="border-r border-primary col-span-4 lg:col-span-5 border-b border-primary lg:h-auto h-21"
+          style={{ backgroundImage: "url('./footer_dot.svg')" }}
+        ></div>
         <div className="lg:py-6.5 text-center lg:row-start-auto row-start-4 col-span-4 lg:col-span-1 pt-4 pb-5 border-t border-primary lg:border-none">
           <h3 className="text-primary font-primary text-center">
             Interested in learning more
@@ -38,15 +41,18 @@ export default function Footer() {
           <SignupForm buttonText="Contact Us" action="mailto:tkrueger@gatesmillstech.com;zwolfe@gatesmillstech.com" classButton="!px-0" classInput="!px-0"  source="FooterForm" />
         </div>
         <Link to="/" className="lg:flex hidden p-11 border-r border-primary items-center justify-center ">
-            <img src="/site-logo.svg" alt="" className="cursor-pointer transition-transform duration-300 ease-out hover:scale-110" />
+            <img src="./site-logo.svg" alt="Gates Mills Technologies logo" className="cursor-pointer transition-transform duration-300 ease-out hover:scale-110" />
         </Link>
         <div className="lg:py-12 pt-20 pb-9 px-3 col-span-4  border-t border-l border-primary lg:row-start-auto row-start-3">
-          <img src="/text.svg" alt="" className="w-full mb-2" />
+          <img src="./text.svg" alt="Gates Mills Technologies wordmark" className="w-full mb-2" />
           <p className="text-primary text-small">
             Copyright © 2026 Gates Mills Technologies LLC - All Rights Reserved.
           </p>
         </div>
-        <div className="bg-[url('/footer_dot.svg')] lg:col-span-1 col-span-4 border-l border-primary lg:mt-0 -mt-14 lg:h-auto h-40"></div>
+        <div
+          className="lg:col-span-1 col-span-4 border-l border-primary lg:mt-0 -mt-14 lg:h-auto h-40"
+          style={{ backgroundImage: "url('./footer_dot.svg')" }}
+        ></div>
       </div>
     </div>
   );

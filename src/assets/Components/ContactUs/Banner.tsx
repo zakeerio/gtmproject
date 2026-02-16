@@ -8,7 +8,7 @@ export default function () {
           <div className="text-center py-20">
               <h1 className="text-primary border-y border-primary text-[76px] font-mono px-2 leading-[50px]">CONTACT</h1>
           </div>
-          <img src="/contact-bg.jpg" className="w-full lg:h-auto h-30.5 object-cover object-center" />
+          <img src="./contact-bg.jpg" alt="Contact page background" className="w-full lg:h-auto h-30.5 object-cover object-center" />
         </div>
         <div  className="grid grid-cols-1 lg:grid-cols-[40%_1fr] items-center justify-center ">
           <div className="lg:border-t border-r  border-primary text-gray font-secondary lg:py-23 lg:pl-14 py-10 pl-6 pr-10">

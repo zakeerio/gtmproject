@@ -50,7 +50,7 @@ export default function Teamside() {
             </div>
             <img src={data.image} alt={data.name} className="lg:w-[41%] w-full col-span-2 row-start-1 lg:h-auto  h-full object-cover" />
           </div>
-            <div className={`bg-[url('/footer_dot.svg')] ${index % 2?'text-right':''} last:hidden`}><img src="/teamshades.svg" className="inline-block w-[41%]"/></div>
+            <div className={`bg-[url('/footer_dot.svg')] ${index % 2?'text-right':''} last:hidden`}><img src="./teamshades.svg" alt="" className="inline-block w-[41%]"/></div>
         </> 
       ))}
     </div>

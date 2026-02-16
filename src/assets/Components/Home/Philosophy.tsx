@@ -2,7 +2,7 @@ export default function Philosophy() {
   return (
     <>
       <div className="flex flex-col lg:grid lg:grid-cols-[48%_1fr] items-center">
-        <img className="w-full" src="/Dots.svg" alt="" />
+        <img className="w-full" src="./Dots.svg" alt="" />
         <div className="lg:pl-16.5 pl-4 max-w-[620px] py-14">
           <h2 className="text-primary font-primary">
             Medium frequency, Systematic, No market correlation, Ultra-scalable.
@@ -33,26 +33,26 @@ export default function Philosophy() {
               this volatility gives us a highly uncorrelated return.
             </p>
           </div>
-          <img src="/graph.svg" alt="" className="lg:w-auto w-full" />
+          <img src="./graph.svg" alt="Trading philosophy graph illustration" className="lg:w-auto w-full" />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 mb-24 border-b border-primary  ">
         <div className="relative">
-          <img src="/lines.svg" alt="" className="w-full" />
+          <img src="./lines.svg" alt="Short signal chart at negative one standard deviation" className="w-full" />
           <div className="absolute bottom-4 lg:left-14 left-4">
             <p className="text-body text-gray">-1 SD</p>
             <p className="text-[32px] text-primary font-secondary">Short Signal</p>
           </div>
         </div>
         <div className="relative border border-primary border-collapse">
-          <img src="/curved__line.png" alt="" className="w-full" />
+          <img src="./curved__line.png" alt="Noise signal chart" className="w-full" />
           <div className="absolute bottom-4 lg:left-14 left-4">
             <p className="text-body text-gray">X</p>
             <p className="text-[32px] text-primary font-secondary">Noise Signal</p>
           </div>
         </div>
         <div className="relative">
-          <img src="curved.svg" alt="" className="w-full" />
+          <img src="curved.svg" alt="Long signal chart at positive one standard deviation" className="w-full" />
           <div className="absolute bottom-4 lg:left-14 left-4">
             <p className="text-body text-gray">+1 SD</p>
             <p className="text-[32px] text-primary font-secondary">Long Signal</p>
